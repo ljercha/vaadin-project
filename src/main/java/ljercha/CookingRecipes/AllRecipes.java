@@ -19,10 +19,11 @@ public class AllRecipes extends AllRecipesDesign {
 			//	NewRecipe recipe = new NewRecipe(myUI, RecipeService.getInstance().findAll().get(tableView.getValue()));
 				//myUI.navigateToView(recipe);
 
-				NewRecipe viewRecipe = new NewRecipe(myUI);
 		        Recipe recipe = (Recipe) event.getSelected().iterator().next();
 
+				NewRecipe viewRecipe = new NewRecipe(myUI,recipe);
 			    BeanFieldGroup.bindFieldsUnbuffered(recipe, viewRecipe);
+			    
 			    viewRecipe.accessRecipe();
 				myUI.navigateToView(viewRecipe);
 

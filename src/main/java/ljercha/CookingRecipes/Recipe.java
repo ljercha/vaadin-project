@@ -3,7 +3,6 @@ package ljercha.CookingRecipes;
 import java.io.Serializable;
 
 @SuppressWarnings("serial")
-
 public class Recipe implements Serializable, Cloneable {
 	
 	private Long id;

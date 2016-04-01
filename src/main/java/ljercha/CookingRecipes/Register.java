@@ -3,6 +3,7 @@ package ljercha.CookingRecipes;
 import com.vaadin.data.validator.EmailValidator;
 import com.vaadin.data.validator.StringLengthValidator;
 import com.vaadin.server.UserError;
+import com.vaadin.server.VaadinSession;
 import com.vaadin.ui.Button;
 import com.vaadin.ui.Button.ClickEvent;
 
@@ -42,7 +43,7 @@ public class Register extends RegisterFormDesign implements Button.ClickListener
 		c.setPassword(password.getValue());
 		UserService.getInstance().save(c);
 		
-		getSession().setAttribute("user", null);
+		getSession().setAttribute("user", login.getValue());
 		this.myUI.navigateToView(new AllRecipes(this.myUI));		
 	}
 }

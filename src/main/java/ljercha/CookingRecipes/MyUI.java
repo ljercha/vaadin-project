@@ -127,7 +127,13 @@ public class MyUI extends UI {
     	
     		layout.addComponent(component);
     	}
-    	menu.updateMenu();
+    	if(layout.getComponent(layout.getComponentCount() - 1).getClass().equals(NewRecipe.class) && component.getClass().equals(NewRecipe.class))
+    	{
+    		layout.removeComponent(layout.getComponent(layout.getComponentCount() - 1));
+        	
+    		layout.addComponent(component);
+    	}
+    		menu.updateMenu();
     }
     
     

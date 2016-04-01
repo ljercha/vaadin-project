@@ -1,2 +1,0 @@
-# Module ljercha.CookingRecipes.MyAppWidgetset
-# RPC service class, partial path of RPC policy file

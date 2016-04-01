@@ -14,8 +14,8 @@ public class Menu extends MenuDesign implements Button.ClickListener {
 
 	    login.addClickListener(e->myUI.navigateToView(new Login(myUI)));
 	    logout.addClickListener(this);
-	    newRecipe.addClickListener(e->myUI.navigateToView(new NewRecipe(myUI)));
-	    
+	    newRecipe.addClickListener(e->myUI.navigateToView(new NewRecipe(myUI, new Recipe())));
+	    allRecipes.addClickListener(e->this.myUI.navigateToView(new AllRecipes(this.myUI)));
 	}
 	
 	public void updateMenu() {
